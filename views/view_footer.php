@@ -1,0 +1,1 @@
+<a href="<?=HOMEDIR?>"><?=$viewdata?></a>

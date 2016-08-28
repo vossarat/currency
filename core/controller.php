@@ -9,7 +9,7 @@ class controller
         $this->view = new view();
     }
 
-    function do_default_viewdata($template_positions = array("header","topmenu", "auth")) //контент позиций по умолчанию
+    function do_default_viewdata($template_positions = array("header","topmenu", "auth", "footer")) //контент позиций по умолчанию
     {
         foreach ($template_positions as $position) {
             $controller_position = "controller_$position";
