@@ -1,0 +1,1 @@
+<h1>это-html,<?=$viewdata?></h1>
