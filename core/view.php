@@ -2,7 +2,7 @@
 
 class view
 {
-    function show_view($template, $viewdata = NULL, $generalView = false)
+    function show_view($template, $viewdata = NULL, $generalView = false, $jsScript = NULL)
     {
         if ($generalView) {
             extract($viewdata);

@@ -9,9 +9,7 @@
         </title>
         <link rel="stylesheet" type="text/css" href="/css/default.css" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-        </script>
-        <script src="<?=$jsScript?>">
-        </script>
+        </script>        
     </head>
 
     <body>

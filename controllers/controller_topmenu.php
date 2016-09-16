@@ -4,6 +4,7 @@ class controller_topmenu extends controller
     function __construct()
     {
         parent::__construct();
+        $this->model = new model_topmenu;
     }
 
     function index()

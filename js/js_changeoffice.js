@@ -51,7 +51,7 @@ $('#del').on('click', del );
 function del() {
     $.ajax({
             type: "POST",
-            url: "http://currency/changeoffice",
+            url: "/changeoffice",
             data: {action: "del",
             	   	   id: $('input:radio[name=id]:checked','#view_changeoffice').val(),
             },
@@ -61,7 +61,14 @@ function del() {
 };
 
 function showEditForm() {
-    $('#edit_changeoffice').removeAttr('hidden');
+    $.ajax({
+            type: "POST",
+            url: "/changeoffice",
+            data: {action: "add",
+            },
+            success: Callback,
+            dataType: "text"
+        });
 }
 
 function send() {
@@ -81,7 +88,7 @@ function send() {
 };
 
 function Callback( returnedData ) {
-  $(location).attr('href','http://currency/changeoffice');
+  $("#msg").html( returnedData );
 }
 
     });

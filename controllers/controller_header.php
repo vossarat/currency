@@ -4,6 +4,7 @@ class controller_header extends controller
     function __construct()
     {
         parent::__construct();
+        $this->model = new model_header;
     }
 
     function index()

@@ -4,6 +4,7 @@ class controller_default extends controller
     function __construct()
     {
         parent::__construct();
+        $this->model = new model_default;
         
     }
 

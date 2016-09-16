@@ -4,8 +4,6 @@ class controller
 {
     function __construct()
     {
-        $model = "model_".array_pop(explode("_",get_class($this))); //имя модели для нового экземпляра класса
-        $this->model = new $model;
         $this->view = new view();
     }
 

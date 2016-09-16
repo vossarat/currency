@@ -4,6 +4,7 @@ class controller_auth extends controller
     function __construct()
     {
         parent::__construct();
+        $this->model = new model_auth();
     }
 
     function index()

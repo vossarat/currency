@@ -4,6 +4,7 @@ class controller_404 extends controller
     function __construct()
     {
         parent::__construct();
+        $this->model = new model_404();
     }
 
     function index()
