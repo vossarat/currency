@@ -2,7 +2,7 @@
 
 <h1>Пункты обмена.</h1>
 
-<div id = "msg"></div>
+<div id = "frm_edit"></div>
 
 <form action="" name="view_changeoffice"><!--Форма отражения информации по пунктам обмена-->
 	<p>&nbsp;</p>

@@ -1,13 +1,16 @@
-<h1>Администрирование пунктов обмена.</h1>
+<script src="<?=$jsScript?>"></script>
 
-<form id = "edit_changeoffice" hidden="hidden">
+<div id = "msg"></div>
+
+<h1>РђРґРјРёРЅРёСЃС‚СЂРёСЂРѕРІР°РЅРёРµ РїСѓРЅРєС‚РѕРІ РѕР±РјРµРЅР°.</h1>
+<form id = "edit_changeoffice">
 <table class = "changeoffice">
-<tr><td align="left">Наименование</td><td><input size=50px type="text" name = "Наименование" id="name"></td></tr>
-<tr><td align="left">Адрес</td><td><input size=50px type="text" name = "Адрес" id="adress"></td></tr>
-<tr><td align="left">Геолокация</td><td><input size=50px type="text" name = "Геолокация" id="geolocation"></td></tr>
-<tr><td align="left">Логин</td><td><input size=50px type="text" id="login"></td></tr>
-<tr><td align="left">Пароль</td><td><input size=50px type="text" id="pass"></td></tr>
+<tr><td align="left">РќР°РёРјРµРЅРѕРІР°РЅРёРµ</td><td><input size=50px type="text" name = "РќР°РёРјРµРЅРѕРІР°РЅРёРµ" id="name"></td></tr>
+<tr><td align="left">РђРґСЂРµСЃ</td><td><input size=50px type="text" name = "РђРґСЂРµСЃ" id="adress"></td></tr>
+<tr><td align="left">Р“РµРѕР»РѕРєР°С†РёСЏ</td><td><input size=50px type="text" name = "Р“РµРѕР»РѕРєР°С†РёСЏ" id="geolocation"></td></tr>
+<tr><td align="left">Р›РѕРіРёРЅ</td><td><input size=50px type="text" id="login"></td></tr>
+<tr><td align="left">РџР°СЂРѕР»СЊ</td><td><input size=50px type="text" id="pass"></td></tr>
 </table>
-<input type="button" id="save" value="Сохранить"/>
-<input type="button" id="cancel" value="Отменить"/>
+<input type="button" id="save" value="РЎРѕС…СЂР°РЅРёС‚СЊ"/>
+<input type="button" id="cancel" value="РћС‚РјРµРЅРёС‚СЊ"/>
 </form>

@@ -28,7 +28,7 @@ class controller_changeoffice extends controller
 	}
     
     function add() {
-    	echo  $this->view->show_view("view_changeoffice_edit", "", false);		
+    	$this->view->show_view("view_changeoffice_edit", "", false, HOMEDIR."/js/js_changeoffice_edit.js");		
 	}
 }
 
