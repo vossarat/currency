@@ -59,10 +59,12 @@ a:hover{
 
 /*Оформление заголовков 1 уровня*/
 h1, h1 a, h1 a:link, h1 a:visited, h1 a:hover{
-    font-size: 38px;
-    text-align: center;
-    font-weight: bold;
-    color: #3b98b0;
+    font-size: 20px;
+    color: #486AAA;
+    text-align: left;
+    border-bottom: 1px solid #a7a6aa;
+    margin-bottom: 5px;
+    display: inline-block;
 }
 
 /*Оформление заголовков 2 уровня*/
@@ -137,7 +139,12 @@ ul {
 #header h1 {
     text-transform: uppercase;
     font-size: 50px;
-    color: #002e52;
+    color: #002e52;    
+    text-align: center;
+    font-weight: bold;    
+    border-bottom: 0;
+    margin-bottom: 0;
+    display: block;   
 }
 
 #content {
