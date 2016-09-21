@@ -13,4 +13,5 @@
 </table>
 <input type="submit" id="save" value="Сохранить"/>
 <input type="button" id="cancel" value="Отменить"/>
+<input type="button" id="addinfo" value="Заполнить"/>
 </form>

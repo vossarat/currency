@@ -2,12 +2,16 @@ $(document).ready(function() {
 
         var requiredFields = new Array("name", "adress", "geolocation", "login", "pass");//перечисляем обязательные поля
 
+        var formFields = (function () {
+                return $( "#edit_changeoffice" ).serializeArray();
+            }()
+        );
+
         $( "#edit_changeoffice" ).on( "submit", function( event ) {
                 event.preventDefault();
                 var error = 0;
-                var formFields =  $( this ).serializeArray();
-                $.each(formFields, function(i, field){
 
+                $.each(formFields, function(i, field){
                         if( $.inArray(field.name, requiredFields) >= 0 & $("#"+field.name).val() == "" ) {
                             error = 1;
                             $("#"+field.name).css('border', 'red 1px solid');
@@ -30,6 +34,14 @@ $(document).ready(function() {
                 $("#frm_edit").empty();
             });
 
+        $('#addinfo').on('click', function () {
+                $('#name').attr('value','Наименовение');
+                $("#adress").attr('value','Адрес');;
+                $("#geolocation").attr('value','Геолокация');;
+                $("#login").attr('value','Логин');;
+                $("#pass").attr('value','Пароль');;
+            });
+
         function add_office() {
             $.ajax({
                     type: "POST",
@@ -37,11 +49,6 @@ $(document).ready(function() {
                     data: {
                         action: "add_office",
                         form_data: $( "#edit_changeoffice" ).serializeArray(),
-                       /* name: $("#name").val(),
-                        adress: $("#adress").val(),
-                        geolocation: $("#geolocation").val(),
-                        login: $("#login").val(),
-                        pass: $("#pass").val(),*/
                     },
                     success: callback_add_office,
                     dataType: "text"

@@ -67,7 +67,9 @@ class model_changeoffice extends model
         $stmt->bindValue(':login', $_POST["login"]);
         $stmt->bindValue(':pass', $_POST["pass"]);
         $stmt->execute();*/
-        echo $_POST("form_data");
+        echo "<pre>";
+			print_r($_POST["form_data"]);
+		echo "</pre>";  
     }
     
 }
