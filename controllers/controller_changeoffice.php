@@ -10,8 +10,11 @@ class controller_changeoffice extends controller
 
     function index()
     {
-    	if ($_POST["action"] == "add"){
-			$this->add();
+    	if ($_POST["action"] == "add_form"){
+			$this->add_form();
+		}
+		elseif ($_POST["action"] == "add_office"){
+			$this->add_office();
 		}
 		else {
 			$this->view_default();
@@ -27,8 +30,12 @@ class controller_changeoffice extends controller
         $this->view->show_view("view_template", $viewdata, true);
 	}
     
-    function add() {
+    function add_form() {
     	$this->view->show_view("view_changeoffice_edit", "", false, HOMEDIR."/js/js_changeoffice_edit.js");		
+	}
+	
+	function add_office() {
+    	$this->model->add_changeoffice() ;		
 	}
 }
 

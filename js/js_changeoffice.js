@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-        $('#add').on('click', showEditForm );
+        $('#add').on('click', show_edit_form );
         $('#del').on('click', del );
 
 
@@ -12,45 +12,26 @@ $(document).ready(function() {
                         action: "del",
                         id: $('input:radio[name=id]:checked','#view_changeoffice').val(),
                     },
-                    success: Callback,
+                    success: callback_del,
                     dataType: "text"
                 });
         };
 
-        function showEditForm() {
+        function show_edit_form() {
             $.ajax({
                     type: "POST",
                     url: "/changeoffice",
                     data: {
-                        action: "add",
+                        action: "add_form",
                     },
-                    success: Callback,
+                    success: callback_add_form,
                     dataType: "text"
-                });
+                    });
         }
-
-        function send() {
-            $.ajax({
-                    type: "POST",
-                    url: "http://currency/changeoffice",
-                    data: {
-                        action: "add",
-                        name: $("#name").val(),
-                        adress: $("#adress").val(),
-                        geolocation: $("#geolocation").val(),
-                        login: $("#login").val(),
-                        pass: $("#pass").val(),
-                    },
-                    success: Callback,
-                    dataType: "text"
-                });
-        };
-
-        function Callback( returnedData ) {
-
-            $("#frm_edit").html( returnedData );
+        
+        function callback_add_form( returned_data ) {
+            $("#frm_edit").html( returned_data );
             $("#frm_edit").fadeIn("slow");
-
         }
 
     });

@@ -27,11 +27,11 @@
 		<file name="C:\OpenServer\domains\currency\models\model_header.php" crc="1474021178"/>
 		<file name="C:\OpenServer\domains\currency\models\model_footer.php" crc="1474021178"/>
 		<file name="C:\OpenServer\domains\currency\models\model_default.php" crc="1474021178"/>
-		<file name="C:\OpenServer\domains\currency\models\model_changeoffice.php" crc="1474021178"/>
+		<file name="C:\OpenServer\domains\currency\models\model_changeoffice.php" crc="1474460069"/>
 		<file name="C:\OpenServer\domains\currency\models\model_auth.php" crc="1474021178"/>
 		<file name="C:\OpenServer\domains\currency\models\model_404.php" crc="1474021178"/>
-		<file name="C:\OpenServer\domains\currency\js\js_changeoffice_edit.js" crc="1474374259"/>
-		<file name="C:\OpenServer\domains\currency\js\js_changeoffice.js" crc="1474265936"/>
+		<file name="C:\OpenServer\domains\currency\js\js_changeoffice_edit.js" crc="1474460372"/>
+		<file name="C:\OpenServer\domains\currency\js\js_changeoffice.js" crc="1474458911"/>
 		<file name="C:\OpenServer\domains\currency\js\js_auth.js" crc="1474021178"/>
 		<file name="C:\OpenServer\domains\currency\css\default.css" crc="1474263896"/>
 		<file name="C:\OpenServer\domains\currency\core\view.php" crc="1474023336"/>
@@ -48,7 +48,7 @@
 		<file name="C:\OpenServer\domains\currency\controllers\controller_header.php" crc="1474023194"/>
 		<file name="C:\OpenServer\domains\currency\controllers\controller_footer.php" crc="1474023194"/>
 		<file name="C:\OpenServer\domains\currency\controllers\controller_default.php" crc="1474023194"/>
-		<file name="C:\OpenServer\domains\currency\controllers\controller_changeoffice.php" crc="1474260706"/>
+		<file name="C:\OpenServer\domains\currency\controllers\controller_changeoffice.php" crc="1474459819"/>
 		<file name="C:\OpenServer\domains\currency\controllers\controller_auth.php" crc="1474023108"/>
 		<file name="C:\OpenServer\domains\currency\controllers\controller_404.php" crc="1474023088"/>
 		<file name="C:\OpenServer\domains\currency\заметки.txt" crc="1474021178"/>

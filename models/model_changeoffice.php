@@ -60,18 +60,15 @@ class model_changeoffice extends model
 
     public function add_changeoffice()
     {
-        $stmt = $this->db->prepare('INSERT INTO changeoffice SET name = :name, adress = :adress, geolocation = :geolocation, login = :login, pass = :pass');
+        /*$stmt = $this->db->prepare('INSERT INTO changeoffice SET name = :name, adress = :adress, geolocation = :geolocation, login = :login, pass = :pass');
         $stmt->bindValue(':name', $_POST["name"]);
         $stmt->bindValue(':adress', $_POST["adress"]);
         $stmt->bindValue(':geolocation', $_POST["geolocation"]);
         $stmt->bindValue(':login', $_POST["login"]);
         $stmt->bindValue(':pass', $_POST["pass"]);
-        $stmt->execute();
+        $stmt->execute();*/
+        echo $_POST("form_data");
     }
     
-    public function show_result()
-    {
-        echo "Написанная ерунда";
-    }
 }
 ?>
