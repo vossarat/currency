@@ -16,6 +16,9 @@ class controller_changeoffice extends controller
 		elseif ($_POST["action"] == "add_office"){
 			$this->do_add_office();
 		}
+		elseif ($_POST["action"] == "edit_form"){
+			$this->show_edit_form();
+		}
 		elseif ($_POST["action"] == "del"){
 			$this->del_office();
 		}
@@ -43,6 +46,11 @@ class controller_changeoffice extends controller
 	
 	function del_office() {
     	$this->model->del_changeoffice() ;		
+	}
+	
+    function show_edit_form() {
+    	$content = 
+    	$this->view->show_view("view_changeoffice_edit", $content, false, HOMEDIR."/js/js_changeoffice_edit.js");		
 	}
 }
 

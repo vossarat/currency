@@ -13,28 +13,6 @@ class model_changeoffice extends model
         return $stmt->fetchall(PDO::FETCH_ASSOC);
     }
 
-    public function index()
-    {
-
-        if ($_POST["view_changeoffice"]) {
-            $stmt = $this->db->prepare('UPDATE changeoffice SET name = :name, adress = :adress, geolocation = :geolocation, login = :login, pass = :pass WHERE id = :id');
-            $stmt->bindValue(':name', $_POST["name"]);
-            $stmt->bindValue(':adress', $_POST["adress"]);
-            $stmt->bindValue(':geolocation', $_POST["geolocation"]);
-            $stmt->bindValue(':login', $_POST["login"]);
-            $stmt->bindValue(':pass', $_POST["pass"]);
-            $stmt->bindValue(':id',$_POST["id"], PDO::PARAM_INT);
-            $stmt->execute();
-        }
-
-        if ($_POST["btn_submit"] == "Редактировать") {
-            $stmt = $this->db->prepare('SELECT id, name, adress, geolocation, login, pass FROM changeoffice WHERE id = :id');
-            $stmt->bindValue(':id', $_POST["id"], PDO::PARAM_INT);
-            $stmt->execute();
-            $_POST= $stmt->fetch(PDO::FETCH_ASSOC);
-        }
-    }
-
     public function add_changeoffice()
     {
         foreach ($_POST["form_data"] as $form_data) {
@@ -48,18 +26,47 @@ class model_changeoffice extends model
         $stmt->bindValue(':login', $info_office["login"]);
         $stmt->bindValue(':pass', $info_office["pass"]);
         $stmt->execute();
-
-        echo "Инфо добавлена";
+		
+		$current_ai = $this->get_ai();
+		
+        echo "<tr>
+        <td><input type=\"radio\" name=\"id\" value=$current_ai/></td>
+        <td>$info_office[name]</td>
+        <td>$info_office[adress]</td>
+        <td>$info_office[geolocation]</td></tr>";
     }
 
     public function del_changeoffice()
     {
-        $stmt = $this->db->prepare('DELETE FROM changeoffice WHERE id = :id');
+        $office_info = $this->get_office_info($_POST["id"]);
+        $stmt        = $this->db->prepare('DELETE FROM changeoffice WHERE id = :id');
         $stmt->bindValue(':id', $_POST["id"], PDO::PARAM_INT);
         $stmt->execute();
         
-        echo "Запись с ID = $_POST[id] удалена";
+        echo "Запись по пункту $office_info[name] удалена";
     }
+
+    public function edit_changeoffice()
+    {
+        $office_info = $this->get_office_info();
+    }
+    
+    public function get_office_info($id)
+    {
+        $stmt = $this->db->prepare('SELECT name FROM changeoffice WHERE id = :id');
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function get_ai()
+    {
+        $stmt    = $this->db->query("SHOW TABLE STATUS LIKE 'changeoffice'");
+        $current_ai = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $current_ai["Auto_increment"]-1;
+    }
+
+
 
 }
 ?>

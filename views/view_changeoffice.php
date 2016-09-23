@@ -11,7 +11,7 @@
 	<input type="button" value="Удалить" id = "del" />
 	<p>&nbsp;</p>
 
-<table class = "changeoffice" border="1" width="700">
+<table class = "view_changeoffice" border="1" width="700">
 <tr align="center"><td></td><td><b>Наименование</b></td><td><b>Адрес</b></td><td><b>Геолокация</b></td></tr>
 <?foreach($viewdata as $po):?>
 <tr>

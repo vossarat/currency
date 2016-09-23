@@ -24,6 +24,7 @@ $(document).ready(function() {
                 }
             });
 
+       
         $('#cancel').on('click', function () {
                 $("#edit_changeoffice").empty();
             });
@@ -50,7 +51,9 @@ $(document).ready(function() {
         };
 
         function callback_add_office( returned_data ) {
-            $("#msg").html( returned_data );
+        	$("#edit_changeoffice").empty();
+            $(".view_changeoffice").append( returned_data );
+            
         }
 
     });

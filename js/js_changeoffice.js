@@ -1,24 +1,28 @@
 $(document).ready(function() {
 
-       
+
         $('#add').on('click', show_edit_form );
 
+        $('#edit').on('click', function () {
+               
+            });
+
+
         $('#del').on('click', function() {
-                console.log($('input[name="id"]:checked').parent().parent()[0].rowIndex);
-                /*                n_str = $('input[name="id"]:checked').val();
+                ri = $('input[name="id"]:checked').parent().parent()[0].rowIndex;
+
+                n_str = $('input[name="id"]:checked').val();
                 if (!n_str) {
-                $("#edit_changeoffice").html( "Выберите информацию для удаления " );
-                return false;
+                    $("#edit_changeoffice").html( "Выберите информацию для удаления " );
+                    return false;
                 }
                 else {
-                $('tr:eq(1)').remove();
-                del();
-                }*/
+                    del();
+                }
             });
 
 
         function del() {
-
             $.ajax({
                     type: "POST",
                     url: "/changeoffice",
@@ -37,10 +41,11 @@ $(document).ready(function() {
 
         function callback_del( returned_data ) {
             $("#edit_changeoffice").html( returned_data );
+            $('input[name="id"]:checked').parent().parent()[0].remove();
             $("#edit_changeoffice").fadeIn("slow");
         }
 
-       
-        
+
+
 
     });
