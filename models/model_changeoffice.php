@@ -48,7 +48,7 @@ class model_changeoffice extends model
 
     public function edit_changeoffice()
     {
-        $office_info = $this->get_office_info();
+        return $this->get_office_info($_POST["id"]);
     }
     
     public function get_office_info($id)

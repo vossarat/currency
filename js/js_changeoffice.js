@@ -1,11 +1,9 @@
 $(document).ready(function() {
 
 
-        $('#add').on('click', show_edit_form );
+        $('#add').on('click', show_add_form );
 
-        $('#edit').on('click', function () {
-               
-            });
+        $('#edit').on('click', show_edit_form );
 
 
         $('#del').on('click', function() {
@@ -35,8 +33,12 @@ $(document).ready(function() {
                 });
         };
 
-        function show_edit_form() {
+        function show_add_form() {
             $("#edit_changeoffice").load("/changeoffice", {action:"add_form"});
+        }
+        
+        function show_edit_form() {
+            $("#edit_changeoffice").load("/changeoffice", {action:"edit_form", id: $('input[name="id"]:checked').val()});
         }
 
         function callback_del( returned_data ) {

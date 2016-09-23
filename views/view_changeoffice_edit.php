@@ -6,7 +6,7 @@
 <form id = "view_changeoffice">
 
 <table class = "add_changeoffice">
-<tr><td align="left">Наименование</td><td><input size=50px type="text" name = "name" id = "name"></td></tr>
+<tr><td align="left">Наименование</td><td><input size=50px type="text" name = "name" id = "name" value = "<?=$viewdata["name"]?>"></td></tr>
 <tr><td align="left">Адрес</td><td><input size=50px type="text" name = "adress" id = "adress"></td></tr>
 <tr><td align="left">Геолокация</td><td><input size=50px type="text" name = "geolocation" id = "geolocation"></td></tr>
 <tr><td align="left">Логин</td><td><input size=50px type="text" name = "login" id = "login"></td></tr>

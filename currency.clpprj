@@ -7,7 +7,6 @@
 		<file name="C:\OpenServer\domains\currency\views\view_changeoffice_edit.php"/>
 		<file name="C:\OpenServer\domains\currency\views\view_changeoffice.php"/>
 		<file name="C:\OpenServer\domains\currency\js\js_changeoffice_edit.js"/>
-		<file name="C:\OpenServer\domains\currency\css\default.css"/>
 	</lastopfiles>
 	<errors version="5.3">
 	</errors>
@@ -20,7 +19,7 @@
 		<file name="C:\OpenServer\domains\currency\views\view_header.php" crc="1474021178"/>
 		<file name="C:\OpenServer\domains\currency\views\view_footer.php" crc="1474021178"/>
 		<file name="C:\OpenServer\domains\currency\views\view_default.php" crc="1474021178"/>
-		<file name="C:\OpenServer\domains\currency\views\view_changeoffice_edit.php" crc="1474624629"/>
+		<file name="C:\OpenServer\domains\currency\views\view_changeoffice_edit.php" crc="1474633949"/>
 		<file name="C:\OpenServer\domains\currency\views\view_changeoffice.php" crc="1474624362"/>
 		<file name="C:\OpenServer\domains\currency\views\view_auth.php" crc="1474021178"/>
 		<file name="C:\OpenServer\domains\currency\views\view_404.php" crc="1474021178"/>
@@ -28,11 +27,11 @@
 		<file name="C:\OpenServer\domains\currency\models\model_header.php" crc="1474021178"/>
 		<file name="C:\OpenServer\domains\currency\models\model_footer.php" crc="1474021178"/>
 		<file name="C:\OpenServer\domains\currency\models\model_default.php" crc="1474021178"/>
-		<file name="C:\OpenServer\domains\currency\models\model_changeoffice.php" crc="1474632649"/>
+		<file name="C:\OpenServer\domains\currency\models\model_changeoffice.php" crc="1474633615"/>
 		<file name="C:\OpenServer\domains\currency\models\model_auth.php" crc="1474021178"/>
 		<file name="C:\OpenServer\domains\currency\models\model_404.php" crc="1474021178"/>
 		<file name="C:\OpenServer\domains\currency\js\js_changeoffice_edit.js" crc="1474624940"/>
-		<file name="C:\OpenServer\domains\currency\js\js_changeoffice.js" crc="1474624940"/>
+		<file name="C:\OpenServer\domains\currency\js\js_changeoffice.js" crc="1474633615"/>
 		<file name="C:\OpenServer\domains\currency\js\js_auth.js" crc="1474021178"/>
 		<file name="C:\OpenServer\domains\currency\js\jquery.min.js" crc="1474619951"/>
 		<file name="C:\OpenServer\domains\currency\css\default.css" crc="1474624629"/>
@@ -50,7 +49,7 @@
 		<file name="C:\OpenServer\domains\currency\controllers\controller_header.php" crc="1474023194"/>
 		<file name="C:\OpenServer\domains\currency\controllers\controller_footer.php" crc="1474023194"/>
 		<file name="C:\OpenServer\domains\currency\controllers\controller_default.php" crc="1474023194"/>
-		<file name="C:\OpenServer\domains\currency\controllers\controller_changeoffice.php" crc="1474632649"/>
+		<file name="C:\OpenServer\domains\currency\controllers\controller_changeoffice.php" crc="1474633380"/>
 		<file name="C:\OpenServer\domains\currency\controllers\controller_auth.php" crc="1474023108"/>
 		<file name="C:\OpenServer\domains\currency\controllers\controller_404.php" crc="1474023088"/>
 		<file name="C:\OpenServer\domains\currency\заметки.txt" crc="1474021178"/>

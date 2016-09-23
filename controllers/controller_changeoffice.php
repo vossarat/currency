@@ -49,7 +49,7 @@ class controller_changeoffice extends controller
 	}
 	
     function show_edit_form() {
-    	$content = 
+    	$content = $this->model->edit_changeoffice();
     	$this->view->show_view("view_changeoffice_edit", $content, false, HOMEDIR."/js/js_changeoffice_edit.js");		
 	}
 }
