@@ -2,7 +2,7 @@
 
 <h1>Пункты обмена.</h1>
 
-<div id = "frm_edit"></div>
+<div id = "edit_changeoffice"></div>
 
 <form action="" name="view_changeoffice"><!--Форма отражения информации по пунктам обмена-->
 	<p>&nbsp;</p>
@@ -10,6 +10,7 @@
 	<input type="button" value="Редактировать" id = "edit" />
 	<input type="button" value="Удалить" id = "del" />
 	<p>&nbsp;</p>
+
 <table class = "changeoffice" border="1" width="700">
 <tr align="center"><td></td><td><b>Наименование</b></td><td><b>Адрес</b></td><td><b>Геолокация</b></td></tr>
 <?foreach($viewdata as $po):?>

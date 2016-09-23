@@ -3,7 +3,8 @@
 <div id = "msg"></div>
 
 <h1>Администрирование пунктов обмена.</h1>
-<form id = "edit_changeoffice">
+<form id = "view_changeoffice">
+
 <table class = "changeoffice">
 <tr><td align="left">Наименование</td><td><input size=50px type="text" name = "name" id = "name"></td></tr>
 <tr><td align="left">Адрес</td><td><input size=50px type="text" name = "adress" id = "adress"></td></tr>

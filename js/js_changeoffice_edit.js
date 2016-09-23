@@ -1,37 +1,31 @@
 $(document).ready(function() {
 
-        var requiredFields = new Array("name", "adress", "geolocation", "login", "pass");//перечисляем обязательные поля
+        var form_required_fields = new Array("name", "adress", "geolocation", "login", "pass");//перечисляем обязательные поля
+       
+        function form_fields_value() {
+			return $( "#view_changeoffice" ).serializeArray();
+		};
 
-        var formFields = (function () {
-                return $( "#edit_changeoffice" ).serializeArray();
-            }()
-        );
-
-        $( "#edit_changeoffice" ).on( "submit", function( event ) {
+        $( "#view_changeoffice" ).on( "submit", function( event ) {
                 event.preventDefault();
                 var error = 0;
 
-                $.each(formFields, function(i, field){
-                        if( $.inArray(field.name, requiredFields) >= 0 & $("#"+field.name).val() == "" ) {
+                $.each(form_fields_value(), function(i, field){
+                	$("#"+field.name).css('border', 'gray 1px solid');
+                        if( $.inArray(field.name, form_required_fields) >= 0 & $("#"+field.name).val() == "" ) {
                             error = 1;
                             $("#"+field.name).css('border', 'red 1px solid');
                             $("#msg").html('Заполните обязательные поля');
                             $("#msg").fadeIn("slow");
                         }
-
                     });
                 if( error == 0 ) {
                     add_office();
                 }
-                else {
-                    console.log("есть ошибки");
-                }
-
-
             });
 
         $('#cancel').on('click', function () {
-                $("#frm_edit").empty();
+                $("#edit_changeoffice").empty();
             });
 
         $('#addinfo').on('click', function () {
@@ -48,7 +42,7 @@ $(document).ready(function() {
                     url: "http://currency/changeoffice",
                     data: {
                         action: "add_office",
-                        form_data: $( "#edit_changeoffice" ).serializeArray(),
+                        form_data: form_fields_value(),
                     },
                     success: callback_add_office,
                     dataType: "text"

@@ -40,16 +40,18 @@
 <treenode node="logout;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f4;15;5;20;;;;vpos;;v;;r;;d4,16;;b0,0;;m">
 </treenode>
 </treenode>
-<treenode node="controller_changeoffice;PHP:Class Name;C:\OpenServer\domains\currency\controllers\controller_changeoffice.php;f0;2;1;39;;;;vpos;;vcontroller;;c;;r;;d0,3;;b0,0;;m">
+<treenode node="controller_changeoffice;PHP:Class Name;C:\OpenServer\domains\currency\controllers\controller_changeoffice.php;f0;2;1;46;;;;vpos;;vcontroller;;c;;r;;d0,3;;b0,0;;m">
 <treenode node="__construct;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_changeoffice.php;f4;4;5;8;;;;vpos;;v;;r;;d4,5;;b0,0;;m">
 </treenode>
-<treenode node="add_form;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_changeoffice.php;f4;32;2;34;;;;vpos;;v;;r;;d24,32;;b0,0;;m">
+<treenode node="del_office;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_changeoffice.php;f1;43;2;45;;;;vpos;;v;;r;;d23,43;;b0,0;;m">
 </treenode>
-<treenode node="add_office;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_changeoffice.php;f1;36;2;38;;;;vpos;;v;;r;;d23,36;;b0,0;;m">
+<treenode node="do_add_office;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_changeoffice.php;f1;39;2;41;;;;vpos;;v;;r;;d26,39;;b0,0;;m">
 </treenode>
-<treenode node="index;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_changeoffice.php;f4;10;5;22;;;;vpos;;v;;r;;d4,11;;b0,0;;m">
+<treenode node="index;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_changeoffice.php;f4;10;5;25;;;;vpos;;v;;r;;d4,11;;b0,0;;m">
 </treenode>
-<treenode node="view_default;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_changeoffice.php;f4;24;2;30;;;;vpos;;v;;r;;d28,24;;b0,0;;m">
+<treenode node="show_add_form;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_changeoffice.php;f4;35;2;37;;;;vpos;;v;;r;;d29,35;;b0,0;;m">
+</treenode>
+<treenode node="view_default;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_changeoffice.php;f4;27;2;33;;;;vpos;;v;;r;;d28,27;;b0,0;;m">
 </treenode>
 </treenode>
 <treenode node="controller_default;PHP:Class Name;C:\OpenServer\domains\currency\controllers\controller_default.php;f0;1;1;17;;;;vpos;;vcontroller;;c;;r;;d0,2;;b0,0;;m">
@@ -106,14 +108,16 @@
 <treenode node="logout;PHP:Function Name;C:\OpenServer\domains\currency\models\model_auth.php;f11;15;5;21;;;;vpos;;v;;r;;d4,16;;b1,0;;m">
 </treenode>
 </treenode>
-<treenode node="model_changeoffice;PHP:Class Name;C:\OpenServer\domains\currency\models\model_changeoffice.php;f0;1;1;74;;;;vpos;;vmodel;;c;;r;;d0,2;;b0,0;;m">
+<treenode node="model_changeoffice;PHP:Class Name;C:\OpenServer\domains\currency\models\model_changeoffice.php;f0;1;1;63;;;;vpos;;vmodel;;c;;r;;d0,2;;b0,0;;m">
 <treenode node="__construct;PHP:Function Name;C:\OpenServer\domains\currency\models\model_changeoffice.php;f11;3;5;6;;;;vpos;;v;;r;;d4,4;;b1,0;;m">
 </treenode>
-<treenode node="add_changeoffice;PHP:Function Name;C:\OpenServer\domains\currency\models\model_changeoffice.php;f11;60;5;72;;;;vpos;;v;;r;;d4,61;;b1,0;;m">
+<treenode node="add_changeoffice;PHP:Function Name;C:\OpenServer\domains\currency\models\model_changeoffice.php;f11;37;5;52;;;;vpos;;v;;r;;d4,38;;b1,0;;m">
 </treenode>
-<treenode node="get_viewdata;PHP:Function Name;C:\OpenServer\domains\currency\models\model_changeoffice.php;f11;53;5;58;;;;vpos;;v;;r;;d4,54;;b1,0;;m">
+<treenode node="del_changeoffice;PHP:Function Name;C:\OpenServer\domains\currency\models\model_changeoffice.php;f11;54;5;61;;;;vpos;;v;;r;;d4,55;;b1,0;;m">
 </treenode>
-<treenode node="index;PHP:Function Name;C:\OpenServer\domains\currency\models\model_changeoffice.php;f11;8;5;51;;;;vpos;;v;;r;;d4,9;;b1,0;;m">
+<treenode node="get_viewdata;PHP:Function Name;C:\OpenServer\domains\currency\models\model_changeoffice.php;f11;8;5;13;;;;vpos;;v;;r;;d4,9;;b1,0;;m">
+</treenode>
+<treenode node="index;PHP:Function Name;C:\OpenServer\domains\currency\models\model_changeoffice.php;f11;15;5;35;;;;vpos;;v;;r;;d4,16;;b1,0;;m">
 </treenode>
 </treenode>
 <treenode node="model_default;PHP:Class Name;C:\OpenServer\domains\currency\models\model_default.php;f0;1;1;15;;;;vpos;;vmodel;;c;;r;;d0,2;;b0,0;;m">
