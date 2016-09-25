@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	
+$("#topmenu img").on("click", function() {
+	$("#content").load("/auth", {action:"auth"});
+});
 
 $("#auth_button").on("click", function() {
         $.ajax({

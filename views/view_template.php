@@ -26,7 +26,7 @@
 
         <div id = "topmenu">
             <?=$topmenu?>
-            <?=$auth?>
+           	<?=$auth?>
         </div>
 
         <div id="page">

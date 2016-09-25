@@ -8,16 +8,27 @@ class controller_auth extends controller
     }
 
     function index()
-    {
-        $content = $this->model->get_viewdata();
-        return $viewdata["auth"] = $this->view->show_view("view_auth", $content);
+    {       
+        if ($_POST["action"] == "auth") {
+			$this->show_auth_form();
+		}
+		else {
+			$content = $this->model->get_viewdata();        
+        	return $this->view->show_view("view_auth", $content, false, HOMEDIR."/js/js_auth.js");
+		}
     }
 
+   
     function logout()
     {
         $this->model->logout();
         $viewdata = $this->do_default_viewdata();
         $this->view->show_view('view_auth', $viewdata);
     }
+    
+    function show_auth_form() {
+		echo "Форма авторизации";
+	}
+    
 }
 ?>

@@ -13,13 +13,20 @@ class controller_changeoffice extends controller
     	if ($_POST["action"] == "add_form"){
 			$this->show_add_form();
 		}
-		elseif ($_POST["action"] == "add_office"){
+		elseif ($_POST["action"] == "add_office") {
 			$this->do_add_office();
 		}
-		elseif ($_POST["action"] == "edit_form"){
+		elseif ($_POST["action"] == "edit_form") {
 			$this->show_edit_form();
 		}
-		elseif ($_POST["action"] == "del"){
+		elseif ($_POST["action"] == "edit_office") {
+			$this->do_edit_office();
+		}
+		elseif ($_POST["action"] == "del") {
+			if (!$_POST["id"] || $_POST["id"] == "") {
+				echo "Выберите информацию для удаления";
+				return;
+			}
 			$this->del_office();
 		}
 		else {
@@ -37,11 +44,15 @@ class controller_changeoffice extends controller
 	}
     
     function show_add_form() {
-    	$this->view->show_view("view_changeoffice_edit", "", false, HOMEDIR."/js/js_changeoffice_edit.js");		
+    	$this->view->show_view("view_changeoffice_edit", NULL, false, HOMEDIR."/js/js_changeoffice_edit.js");		
 	}
 	
 	function do_add_office() {
     	$this->model->add_changeoffice() ;		
+	}
+	
+	function do_edit_office() {
+    	$this->model->save_edit_changeoffice() ;		
 	}
 	
 	function del_office() {

@@ -10,7 +10,11 @@ class model_auth extends model
 
     public function get_viewdata()
     {
-        return $_SESSION["is_auth"] == TRUE ? '<a href="'.HOMEDIR.'/auth/logout"/><img src="/images/unlock.png" width="16" height="16"></a>' : '<a href="'.HOMEDIR.'/auth"/><img src="/images/lock.png" width="16" height="16"></a>';
+        return ($_SESSION["is_auth"] == TRUE)
+        /*? '<a href="'.HOMEDIR.'/auth/logout"/><img src="/images/unlock.png" width="16" height="16"></a>' 
+        : '<a href="'.HOMEDIR.'/auth"/><img src="/images/lock.png" width="16" height="16"></a>';*/
+        ? '<img src="/images/unlock.png" width="16" height="16">' 
+        : '<img src="/images/lock.png" width="16" height="16">';
     }
 
     public function logout()

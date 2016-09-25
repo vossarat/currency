@@ -1,5 +1,7 @@
+<script src="<?=$jsScript?>"></script>
+<?=$viewdata?>
 <!--<a href="auth/logout"/><img src="/images/unlock.png" width="16" height="16"></a>-->
-<a href="auth"/><img src="/images/lock.png" width="16" height="16"></a>
+<!--<a href="auth"/><img src="/images/lock.png" width="16" height="16"></a>-->
 
 <!--<h2>Форма авторизации</h2>
 <div id=msg></div>

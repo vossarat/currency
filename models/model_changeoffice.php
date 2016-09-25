@@ -13,11 +13,16 @@ class model_changeoffice extends model
         return $stmt->fetchall(PDO::FETCH_ASSOC);
     }
 
-    public function add_changeoffice()
-    {
-        foreach ($_POST["form_data"] as $form_data) {
+    public function get_post_data() {
+		foreach ($_POST["form_data"] as $form_data) {
             $info_office[$form_data["name"]] = $form_data[value];
         }
+        return $info_office;
+	}
+    
+    public function add_changeoffice()
+    {
+        $info_office = $this->get_post_data();       
 
         $stmt = $this->db->prepare('INSERT INTO changeoffice SET name = :name, adress = :adress, geolocation = :geolocation, login = :login, pass = :pass');
         $stmt->bindValue(':name', $info_office["name"]);
@@ -27,14 +32,26 @@ class model_changeoffice extends model
         $stmt->bindValue(':pass', $info_office["pass"]);
         $stmt->execute();
 		
-		$current_ai = $this->get_ai();
+		$info_office["id"] = $this->get_ai();
 		
-        echo "<tr>
-        <td><input type=\"radio\" name=\"id\" value=$current_ai/></td>
-        <td>$info_office[name]</td>
-        <td>$info_office[adress]</td>
-        <td>$info_office[geolocation]</td></tr>";
+        echo $this->returned_data($info_office) ;
     }
+    
+    public function save_edit_changeoffice() {
+		$info_office = $this->get_post_data();
+		
+        $stmt = $this->db->prepare('UPDATE changeoffice SET name = :name, adress = :adress, geolocation = :geolocation, login = :login, pass = :pass WHERE id = :id');
+        $stmt->bindValue(':id', $info_office["id"], PDO::PARAM_INT);
+        $stmt->bindValue(':name', $info_office["name"]);
+        $stmt->bindValue(':adress', $info_office["adress"]);
+        $stmt->bindValue(':geolocation', $info_office["geolocation"]);
+        $stmt->bindValue(':login', $info_office["login"]);
+        $stmt->bindValue(':pass', $info_office["pass"]);
+        $stmt->execute();
+        
+        echo $this->returned_data($info_office, $id) ;
+	}
+    
 
     public function del_changeoffice()
     {
@@ -53,7 +70,7 @@ class model_changeoffice extends model
     
     public function get_office_info($id)
     {
-        $stmt = $this->db->prepare('SELECT name FROM changeoffice WHERE id = :id');
+        $stmt = $this->db->prepare('SELECT id, name, adress, geolocation, login, pass FROM changeoffice WHERE id = :id');
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
@@ -65,6 +82,14 @@ class model_changeoffice extends model
         $current_ai = $stmt->fetch(PDO::FETCH_ASSOC);
 		return $current_ai["Auto_increment"]-1;
     }
+    
+     public function returned_data($info_office) {
+	 	return "<tr>
+        <td><input type=\"radio\" name=\"id\" value=$info_office[id]/></td>
+        <td>$info_office[name]</td>
+        <td>$info_office[adress]</td>
+        <td>$info_office[geolocation]</td></tr>";
+	 }
 
 
 
