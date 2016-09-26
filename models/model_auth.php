@@ -47,7 +47,7 @@ class model_auth extends model
 
     public function do_auth()
     {	
-        $stmt = $this->db->prepare('SELECT * FROM changeoffice WHERE login = :login AND pass = :pass');
+        $stmt = $this->db->prepare('SELECT * FROM changeoffice WHERE login = :login AND pass = :pass LIMIT 1');
         $stmt->bindParam(':login', $_POST['login']);
         $stmt->bindValue(':pass', md5(md5($_POST["pass"])));
         $stmt->execute();       

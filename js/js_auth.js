@@ -9,7 +9,7 @@ $("#auth_button").on("click", function() {
                 type: "POST",
                 url: "http://currency/auth",
                 data: {
-                     auth: "auth",
+                     action: "do_auth",
                     login: $('#login').val(),
                      pass: $('#pass').val(),
                 },
@@ -21,5 +21,4 @@ $("#auth_button").on("click", function() {
 function Callback( returnedData ) {
     $(location).attr('href','http://currency/changeoffice');
 }
-
     });

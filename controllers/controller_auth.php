@@ -12,6 +12,9 @@ class controller_auth extends controller
         if ($_POST["action"] == "auth") {
 			$this->show_auth_form();
 		}
+		elseif ($_POST["action"] == "do_auth") {
+			$this->show_auth_form();
+		}
 		else {
 			$content = $this->model->get_viewdata();        
         	return $this->view->show_view("view_auth", $content, false, HOMEDIR."/js/js_auth.js");
@@ -27,7 +30,11 @@ class controller_auth extends controller
     }
     
     function show_auth_form() {
-		echo "Форма авторизации";
+        return $this->view->show_view("view_form_auth", NULL);
+	}
+	
+	function do_auth() {
+        return $this->view->show_view("view_form_auth", NULL);
 	}
     
 }
