@@ -5,6 +5,7 @@ class controller
     function __construct()
     {
         $this->view = new view();
+        $this->auth = new auth();
     }
 
     function do_default_viewdata($template_positions = array("header","topmenu", "auth", "footer")) //контент позиций по умолчанию
