@@ -1,12 +1,13 @@
 $(document).ready(function() {
 
+        
         $("#auth").on("click", function() {
-        		if($(this).children()[1] == '<img src="/images/lock.png" width="16" height="16">'){
-					$("#content").load("auth", {action: "auth_form"});
-				} else {
-					$("#content").load("auth", {action: "logout"});
-				}
-                
+        			if ($("#auth img").attr('src') == '/images/lock.png') {
+						$("#content").load("auth", {action: "auth_form"});
+					} else {
+						console.log($("#auth img").attr('src'));
+					};
+									
                 
             });
 
