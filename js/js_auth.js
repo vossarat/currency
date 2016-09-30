@@ -1,24 +1,31 @@
 $(document).ready(function() {
-	
-$("#topmenu img").on("click", function() {
-	$("#content").load("/auth", {action:"auth"});
-});
 
-$("#auth_button").on("click", function() {
-        $.ajax({
-                type: "POST",
-                url: "http://currency/auth",
-                data: {
-                     action: "do_auth",
-                    login: $('#login').val(),
-                     pass: $('#pass').val(),
-                },
-                success: Callback,
-                dataType: "text"
+        $("#auth").on("click", function() {
+        		if($(this).children()[1] == '<img src="/images/lock.png" width="16" height="16">'){
+					$("#content").load("auth", {action: "auth_form"});
+				} else {
+					$("#content").load("auth", {action: "logout"});
+				}
+                
+                
             });
-    });
 
-function Callback( returnedData ) {
-    $(location).attr('href','http://currency/changeoffice');
-}
+        $("#content").on("click", "#auth_button", function() {
+                $.ajax({
+                        type: "POST",
+                        url: "auth",
+                        data: {
+                            action: "do_auth",
+                            login: $('#login').val(),
+                            pass: $('#pass').val(),
+                        },
+                        success: Callback,
+                        dataType: "text"
+                    });
+            });
+
+        function Callback( return_data ) {
+            $("#auth").html( return_data );
+        }
+
     });

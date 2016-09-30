@@ -118,6 +118,48 @@ ul {
     margin: auto;
 }
 
+#topmenu {
+    font: bold 16px Arial, Helvetica, sans-serif;
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    background: #fff;
+    background-color: #fff;
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.06);
+    text-transform: uppercase;
+}
+
+#topmenu ul {
+    display: inline-block;
+    left: 50%;
+}
+
+#topmenu ul li {
+    list-style: none;
+    margin-left: -2px;
+}
+
+#topmenu ul li a {
+    display: block;
+    padding: 0px 30px;
+    text-decoration: none;
+    color: gray;
+}
+
+#topmenu a:hover {
+    color: #f0b251;
+}
+
+
+#auth {
+    /*display: inline-block;*/
+    float: right;
+    cursor: pointer;
+}
+
 #logo {
     margin-top: 10px;
     border: 1px solid;
@@ -170,45 +212,4 @@ ul {
 
 .add_changeoffice, .view_changeoffice {
     margin: auto;
-}
-
-#topmenu {
-    text-align: center;
-    height: 48px;
-    background-color: #fff; /*#0699d3;*/
-    -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-}
-
-#topmenu {
-    font: bold 16px Arial, Helvetica, sans-serif;
-    text-align: center;
-    height: 48px;
-    line-height: 48px;
-    background: #fff;
-    color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.06);
-    text-transform: uppercase;
-}
-
-#topmenu ul {
-    display: inline-block;
-    left: 50%;
-}
-
-#topmenu ul li {
-    list-style: none;
-    margin-left: -2px;
-}
-
-#topmenu ul li a {
-    display: block;
-    padding: 0px 30px;
-    text-decoration: none;
-    color: gray;
-}
-
-#topmenu a:hover {
-    color: #f0b251;
 }

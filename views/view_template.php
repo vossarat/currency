@@ -8,7 +8,8 @@
             <?=$pagetitle?$pagetitle:"Курс обмена валют"?>
         </title>
         <link rel="stylesheet" type="text/css" href="/css/default.css" />
-        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">-->
+        </script>
         <script src="../js/jquery.min.js"></script>
     </head>
 
@@ -26,7 +27,9 @@
 
         <div id = "topmenu">
             <?=$topmenu?>
-           	<?=$auth?>
+            <div id = "auth">
+                <?=$auth?>
+            </div>
         </div>
 
         <div id="page">
