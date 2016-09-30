@@ -10,6 +10,7 @@ class auth
     {
         return ($_SESSION["is_auth"] == TRUE) ? TRUE : FALSE;
     }
+<<<<<<< HEAD
     
     public function do_auth()
     {
@@ -45,5 +46,16 @@ class auth
         }
         return $chk;
     }// end function check()
+=======
+
+/*    public function do_auth()
+    {
+        $stmt = $this->db->prepare('SELECT * FROM changeoffice WHERE login = :login and pass = :pass  LIMIT 1');
+        $stmt->bindParam(':login', $_POST['login']);
+        $stmt->bindParam(':pass', md5(md5($_POST['pass'])));
+        $stmt->execute();
+        return count($stmt->fetchall) > 0 ? TRUE : FALSE ;
+    }*/
+>>>>>>> 213dbb5d9d7943c0e0f4a5f6d9e1bdaf00f35cef
 }
 ?>
