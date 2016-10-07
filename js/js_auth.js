@@ -1,14 +1,27 @@
 $(document).ready(function() {
 
-        
+
         $("#auth").on("click", function() {
-        			if ($("#auth img").attr('src') == '/images/lock.png') {
-						$("#content").load("auth", {action: "auth_form"});
-					} else {
-						console.log($("#auth img").attr('src'));
-					};
-									
-                
+                $(".popup,.popup_overlay").fadeIn(400);
+                /*$(".popup,.popup_overlay");*/
+
+                /*                if ($("#auth img").attr('src') == '/images/lock.png') {
+                $("#content").load("auth", {action: "auth_form"});
+                } else {
+                $.ajax({
+                type: "POST",
+                url: "auth",
+                data: {
+                action: "logout",
+                },
+                success: function( return_data ) {
+                $("#auth").html( return_data );
+                } ,
+                dataType: "text"
+                });
+                };*/
+
+
             });
 
         $("#content").on("click", "#auth_button", function() {
@@ -28,5 +41,9 @@ $(document).ready(function() {
         function Callback( return_data ) {
             $("#auth").html( return_data );
         }
+
+        $("#close").on("click", function() {
+                $('.popup_overlay').css({"display" : "none"}); //скрываем всплывающее окно
+            });
 
     });

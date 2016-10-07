@@ -25,10 +25,16 @@ class controller_auth extends controller
         }
     }
 
+    function do_auth()
+    {
+        $this->auth->do_auth();
+        return $this->view->show_view("view_auth", $this->auth->is_auth(), false, NULL);
+    }
+
     function logout()
     {
         $this->auth->logout();
-        return $this->view->show_view("view_auth", $this->auth->is_auth());
+        return $this->view->show_view("view_auth", $this->auth->is_auth(), false, NULL);
     }
 
 
@@ -37,11 +43,7 @@ class controller_auth extends controller
         return $this->view->show_view("view_auth_form", NULL);
     }
 
-    function do_auth()
-    {
-        $this->auth->do_auth();
-        return $this->view->show_view("view_auth", $this->auth->is_auth());
-    }
+
 
 }
 

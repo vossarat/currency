@@ -1,4 +1,4 @@
-<h1>Форма авторизации</h1>
+<!--<h1>Форма авторизации</h1>
 
 <div id=msg></div>
 
@@ -12,4 +12,4 @@
 </tr>
 </table>
 <input type="button" id="auth_button" value="Войти">
-</form>
+</form>-->

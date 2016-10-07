@@ -26,6 +26,7 @@ class auth
         session_start();
         $_SESSION = array();
         session_destroy();
+        
     }
 	
     public function chk_auth()
