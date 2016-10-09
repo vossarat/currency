@@ -21,7 +21,7 @@ class controller_auth extends controller
         }
         else {
             $content = $this->auth->is_auth();
-            return $this->view->show_view("view_auth", $content, false, HOMEDIR."/js/js_auth.js");
+            return $this->view->show_view("view_auth", $content, false, NULL);
         }
     }
 
@@ -36,14 +36,6 @@ class controller_auth extends controller
         $this->auth->logout();
         return $this->view->show_view("view_auth", $this->auth->is_auth(), false, NULL);
     }
-
-
-    function show_auth_form()
-    {
-        return $this->view->show_view("view_auth_form", NULL);
-    }
-
-
 
 }
 

@@ -11,7 +11,7 @@ class controller_topmenu extends controller
     {
         //$_POST = TRUE;
         $content = $this->model->get_viewdata();
-        return $viewdata["topmenu"] = $this->view->show_view("view_topmenu", $content);
+        return $viewdata["topmenu"] = $this->view->show_view("view_topmenu", $content, null, HOMEDIR."/js/js_auth.js");
     }
 }
 ?>

@@ -1,30 +1,33 @@
 $(document).ready(function() {
 
 
-        $("#auth").on("click", function() {
-                $(".popup,.popup_overlay").fadeIn(400);
-                /*$(".popup,.popup_overlay");*/
+        $("#auth a").on("click", function() {
+        	
+                if ($("#auth a img").attr('src') == '/images/lock.png') {
+                    var win_height = $(window).height();
+                    var win_width = $(window).width();
+                    $("#auth_form").css('top',  win_height/2-$("#auth_form").height()/2);
+                    $("#auth_form").css('left', win_width/2-$("#auth_form").width()/2);
+                    $('#auth_form, #substrate').fadeIn("slow");
 
-                /*                if ($("#auth img").attr('src') == '/images/lock.png') {
-                $("#content").load("auth", {action: "auth_form"});
                 } else {
-                $.ajax({
-                type: "POST",
-                url: "auth",
-                data: {
-                action: "logout",
-                },
-                success: function( return_data ) {
-                $("#auth").html( return_data );
-                } ,
-                dataType: "text"
-                });
-                };*/
+                    $.ajax({
+                            type: "POST",
+                            url: "auth",
+                            data: {
+                                action: "logout",
+                            },
+                            success: function( return_data ) {
+                                $("#auth").html( return_data );
+                            } ,
+                            dataType: "text"
+                        });
+                };
 
 
             });
 
-        $("#content").on("click", "#auth_button", function() {
+        $("#auth_button").on("click", function() {
                 $.ajax({
                         type: "POST",
                         url: "auth",
@@ -39,11 +42,10 @@ $(document).ready(function() {
             });
 
         function Callback( return_data ) {
-            $("#auth").html( return_data );
+        	console.log( return_data );
+            $("#auth a img").attr("src") = return_data ;
+            $("#auth_form, #substrate").fadeOut("slow");
         }
 
-        $("#close").on("click", function() {
-                $('.popup_overlay').css({"display" : "none"}); //скрываем всплывающее окно
-            });
 
     });

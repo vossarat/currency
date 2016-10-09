@@ -1,16 +1,22 @@
-<?if($jsScript !== NULL):?> 
-<script src="<?=$jsScript?>"></script>
-<?endif?>
-
 <?if($viewdata == TRUE):?> 
-<img src="/images/unlock.png" width="16" height="16">
+<a><img src="/images/unlock.png" width="16" height="16"></a>
 <?else:?> 
-<img src="/images/lock.png" width="16" height="16">
+<a><img src="/images/lock.png" width="16" height="16"></a>
 <?endif?>
 
-<div class="popup_overlay"></div>
-<div class="popup">
-  <div class="popup_title">Заголовок всплывающего окна <span class="closer">X</span></div>
-  <div class="popup_content">Содержимое всплывающего окна, форма обратной связи или что-то, что вам нужно.</div>
-  <button id = "close">llk</button>
-</div>
+<form id="auth_form"> <!--Форма аутентификации-->
+
+<div id = "msg"></div>
+
+<table>
+<tr><td>Логин:</td>
+           <td><input style="border:1px silver solid; width:160px;" type=text id=login></td>
+</tr>
+<tr><td>Пароль:</td>
+      	  <td><input style="border:1px silver solid; width:160px;" type=text id = pass></td>
+</tr>
+</table>
+<input type="button" id="auth_button" value="Войти">
+</form>
+
+<div id = "substrate"></div> <!--Подложка-->

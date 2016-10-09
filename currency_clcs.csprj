@@ -34,7 +34,7 @@
 <treenode node="index;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_404.php;f4;9;5;17;;;;vpos;;v;;r;;d4,10;;b0,0;;m">
 </treenode>
 </treenode>
-<treenode node="controller_auth;PHP:Class Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f0;2;1;47;;;;vpos;;vcontroller;;c;;r;;d0,3;;b0,0;;m">
+<treenode node="controller_auth;PHP:Class Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f0;2;1;39;;;;vpos;;vcontroller;;c;;r;;d0,3;;b0,0;;m">
 <treenode node="__construct;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f4;4;5;8;;;;vpos;;v;;r;;d4,5;;b0,0;;m">
 </treenode>
 <treenode node="do_auth;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f4;27;5;31;;;;vpos;;v;;r;;d4,28;;b0,0;;m">
@@ -42,8 +42,6 @@
 <treenode node="index;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f4;10;5;25;;;;vpos;;v;;r;;d4,11;;b0,0;;m">
 </treenode>
 <treenode node="logout;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f4;33;5;37;;;;vpos;;v;;r;;d4,34;;b0,0;;m">
-</treenode>
-<treenode node="show_auth_form;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f4;40;5;43;;;;vpos;;v;;r;;d4,41;;b0,0;;m">
 </treenode>
 </treenode>
 <treenode node="controller_changeoffice;PHP:Class Name;C:\OpenServer\domains\currency\controllers\controller_changeoffice.php;f0;2;1;65;;;;vpos;;vcontroller;;c;;r;;d0,3;;b0,0;;m">
@@ -168,8 +166,6 @@
 </treenode>
 <treenode node="view;PHP:Class Name;C:\OpenServer\domains\currency\core\view.php;f0;2;1;21;;;;vpos;;v;;r;;d0,3;;b0,0;;m">
 <treenode node="show_view;PHP:Function Name;C:\OpenServer\domains\currency\core\view.php;f4;4;5;20;;;;vpos;;v;;r;;d4,5;;b0,0;;mtemplate;;pviewdata;;pgeneralView;;pjsScript;;p">
-<treenode node="views/;PHP:PHP Include;C:\OpenServer\domains\currency\core\view.php;f21;8;27;8;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-</treenode>
 </treenode>
 </treenode>
 </phptree>

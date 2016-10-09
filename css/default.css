@@ -200,8 +200,7 @@ ul {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
-#footer
-{
+#footer {
     width: 100%;
     float: left;
     padding: 25px 0px;
@@ -214,36 +213,24 @@ ul {
     margin: auto;
 }
 
-.popup_overlay{
+#auth_form {
     display: none;
-    background: rgba(0,0,0,.9);
-    width: 100%;
-    height: 100%;
+    position: absolute;    
+    z-index: 9999;
+    padding: 20px;
+    border-radius: 20px;
+    background: #f0b251;
+    text-transform: none;
+    opacity: 1;
+}
+#substrate {
+    display: none;
+    background-color: #000;
+    height: 100%; 
+    left: 0; 
+    opacity: 0.50;
     position: fixed;
     top: 0;
-    left: 0;
-}
-.popup{
-    display: none;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,1);
-    width: 600px;
-    height: 500px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-left: -300px;
-    margin-top: -250px;
-}
-.popup_title{
-    font-weight: bold;
-    padding: 10px;
-}
-.popup_content{
-    padding: 10px;
-    border-top: 1px solid #ccc;
-}
-.closer{
-    float: right;
-    cursor: pointer;
+    width: 100%; 
+    z-index: 100;
 }
