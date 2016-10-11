@@ -7,7 +7,6 @@ class model_auth extends model
         parent::__construct();
 
     }
-
 }
 
 ?>

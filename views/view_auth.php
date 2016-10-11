@@ -1,3 +1,7 @@
+<?if($jsScript !== NULL):?> 
+	<script src="<?=$jsScript?>"></script>
+<?endif?>
+
 <?if($viewdata == TRUE):?> 
 <a><img src="/images/unlock.png" width="16" height="16"></a>
 <?else:?> 

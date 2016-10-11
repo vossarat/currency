@@ -34,14 +34,14 @@
 <treenode node="index;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_404.php;f4;9;5;17;;;;vpos;;v;;r;;d4,10;;b0,0;;m">
 </treenode>
 </treenode>
-<treenode node="controller_auth;PHP:Class Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f0;2;1;39;;;;vpos;;vcontroller;;c;;r;;d0,3;;b0,0;;m">
+<treenode node="controller_auth;PHP:Class Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f0;2;1;40;;;;vpos;;vcontroller;;c;;r;;d0,3;;b0,0;;m">
 <treenode node="__construct;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f4;4;5;8;;;;vpos;;v;;r;;d4,5;;b0,0;;m">
 </treenode>
-<treenode node="do_auth;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f4;27;5;31;;;;vpos;;v;;r;;d4,28;;b0,0;;m">
+<treenode node="do_auth;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f4;27;5;32;;;;vpos;;v;;r;;d4,28;;b0,0;;m">
 </treenode>
 <treenode node="index;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f4;10;5;25;;;;vpos;;v;;r;;d4,11;;b0,0;;m">
 </treenode>
-<treenode node="logout;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f4;33;5;37;;;;vpos;;v;;r;;d4,34;;b0,0;;m">
+<treenode node="logout;PHP:Function Name;C:\OpenServer\domains\currency\controllers\controller_auth.php;f4;34;5;38;;;;vpos;;v;;r;;d4,35;;b0,0;;m">
 </treenode>
 </treenode>
 <treenode node="controller_changeoffice;PHP:Class Name;C:\OpenServer\domains\currency\controllers\controller_changeoffice.php;f0;2;1;65;;;;vpos;;vcontroller;;c;;r;;d0,3;;b0,0;;m">
@@ -102,7 +102,7 @@
 <treenode node="get_viewdata;PHP:Function Name;C:\OpenServer\domains\currency\models\model_404.php;f11;7;5;10;;;;vpos;;v;;r;;d4,8;;b1,0;;m">
 </treenode>
 </treenode>
-<treenode node="model_auth;PHP:Class Name;C:\OpenServer\domains\currency\models\model_auth.php;f0;2;1;10;;;;vpos;;vmodel;;c;;r;;d0,3;;b0,0;;m">
+<treenode node="model_auth;PHP:Class Name;C:\OpenServer\domains\currency\models\model_auth.php;f0;2;1;9;;;;vpos;;vmodel;;c;;r;;d0,3;;b0,0;;m">
 <treenode node="__construct;PHP:Function Name;C:\OpenServer\domains\currency\models\model_auth.php;f11;4;5;8;;;;vpos;;v;;r;;d4,5;;b1,0;;m">
 </treenode>
 </treenode>
