@@ -45,13 +45,14 @@ $(document).ready(function() {
             });
 
         function Callback( return_data ) {
-            if (return_data == '/images/unlock.png') {
+/*            if (return_data == '/images/unlock.png') {
 
                 $("#img_lock").attr( "src", return_data )  ;
                 $("#auth_form, #substrate").fadeOut("slow");
             } else {
                 $("#msg").html("Пользователь не найден") ;
-            }
+            }*/
+            console.log( return_data );
 
         }
 
