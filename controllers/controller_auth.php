@@ -28,14 +28,14 @@ class controller_auth extends controller
     function do_auth()
     {
         $this->auth->do_auth();
-        echo $this->auth->is_auth() ? '<img src="/images/lock.png" width="16" height="16">' : '<img src="/images/lock.png" width="16" height="16">'; 
+        echo $this->auth->is_auth() ? '/images/unlock.png' : '/images/lock.png'; 
         
     }
 
     function logout()
     {
         $this->auth->logout();
-        echo $this->auth->is_auth() ? '<img src="/images/lock.png" width="16" height="16">' : '<img src="/images/lock.png" width="16" height="16">'; 
+        echo $this->auth->is_auth() ? '/images/unlock.png' : '/images/lock.png';  
     }
 
 }

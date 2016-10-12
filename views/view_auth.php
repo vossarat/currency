@@ -3,9 +3,9 @@
 <?endif?>
 
 <?if($viewdata == TRUE):?> 
-<a><img src="/images/unlock.png" width="16" height="16"></a>
+<a><img id = "img_lock" src="/images/unlock.png" width="16" height="16"></a>
 <?else:?> 
-<a><img src="/images/lock.png" width="16" height="16"></a>
+<a><img id = "img_lock" src="/images/lock.png" width="16" height="16"></a>
 <?endif?>
 
 <form id="auth_form"> <!--Форма аутентификации-->
