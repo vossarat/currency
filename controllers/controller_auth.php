@@ -21,21 +21,21 @@ class controller_auth extends controller
         }
         else {
             $content = $this->auth->is_auth();
-            return $this->view->show_view("view_auth", $content, false, HOMEDIR."/js/js_auth.js");
+            return $this->view->show_view("view_auth", $content["chk"], false, HOMEDIR."/js/js_auth.js");
         }
     }
 
     function do_auth()
     {
         $this->auth->do_auth();
-        echo $this->auth->is_auth() ? '/images/unlock.png' : '/images/lock.png'; 
+        echo json_encode($this->auth->is_auth()) ;
         
     }
 
     function logout()
     {
         $this->auth->logout();
-        echo $this->auth->is_auth() ? '/images/unlock.png' : '/images/lock.png';  
+        echo json_encode($this->auth->is_auth()) ;  
     }
 
 }

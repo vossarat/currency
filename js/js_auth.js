@@ -13,7 +13,8 @@ $(document).ready(function() {
                     $("#auth_form").css('left', win_width/2-$("#auth_form").width()/2);
                     $('#auth_form, #substrate').fadeIn("slow");
 
-                } else {
+                } else {              	
+              	
                     $.ajax({
                             type: "POST",
                             url: "auth",
@@ -21,9 +22,9 @@ $(document).ready(function() {
                                 action: "logout",
                             },
                             success: function( return_data ) {
-                                $("#img_lock").attr( "src", return_data ) ;
+                                $("#img_lock").attr( "src", return_data["src"] ) ;
                             } ,
-                            dataType: "text"
+                            dataType: "json"
                         });
                 };
 
@@ -40,19 +41,18 @@ $(document).ready(function() {
                             pass: $('#pass').val(),
                         },
                         success: Callback,
-                        dataType: "text"
+                        dataType: "json"
                     });
             });
 
         function Callback( return_data ) {
-/*            if (return_data == '/images/unlock.png') {
-
-                $("#img_lock").attr( "src", return_data )  ;
+        	console.log( return_data );
+            if (return_data["chk"]) {
+                $("#img_lock").attr( "src", return_data["src"] )  ;
                 $("#auth_form, #substrate").fadeOut("slow");
             } else {
-                $("#msg").html("Пользователь не найден") ;
-            }*/
-            console.log( return_data );
+                $("#msg").html(return_data["msg"]) ;
+            }
 
         }
 
