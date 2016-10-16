@@ -2,7 +2,7 @@
 	<script src="<?=$jsScript?>"></script>
 <?endif?>
 
-<?if($viewdata == TRUE):?> 
+<?if($viewdata == 1):?> 
 <a><img id = "img_lock" src="/images/unlock.png" width="16" height="16"></a>
 <?else:?> 
 <a><img id = "img_lock" src="/images/lock.png" width="16" height="16"></a>
